@@ -27,18 +27,43 @@ const menu =[
     category:'breakfast',
 
 
-}
+},
+{
+    name:'Milk',
+    price: 0.99,
+    img:'Images/Milk.jfif',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia quas corrupti aperiam qui quos, ea ipsum nihil enim dolor corporis.',
+    category:'drink',
 
+
+}
 
 
 ];
 
 
 
+
+
+//filtering Menu for food types depending on button pressed
+const breakfasts = menu.filter(foodType => 
+    foodType.category === 'breakfast');
+
+
+
+const drinks = menu.filter(foodType => 
+    foodType.category === 'drink');
+
+console.log(drinks)
+
+
+
+
+
 const display = document.querySelector(".display");   //get display section
 
 window.addEventListener("DOMContentLoaded", function () {       //on page loading,  create a new array by calling a function on each original array element 
-  let displayMenu = menu.map(function (item) {
+  let displayMenu = drinks.map(function (item) {
 
     //populate displayMenu with the HTML below, with details filled in from menu array
 
@@ -55,13 +80,10 @@ window.addEventListener("DOMContentLoaded", function () {       //on page loadin
 
 
   });
-  console.log(displayMenu[0]);
+
   
-  displayMenu = displayMenu.join('');   //returns array as a string
-  console.log(displayMenu);
+  displayMenu = displayMenu.join('');   //returns array (displayMenu) as a string
+
 
   display.innerHTML = displayMenu;
 });
-
-
-console.log(display.innerHTML);
