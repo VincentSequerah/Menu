@@ -1,6 +1,30 @@
+:root {
+    --blue: #0000ff;
+    --white: #ffffff;
+    --red:#ff0000;
+    --black:#000000;
+  }
+
+h1{
+    color: var(--red);
+}
+
 img{
 
     width: 30vw;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+
+button{
+    border:5px solid var(--red);
+    border-radius: 5px;
+    border-style: double;
+    background-color: var(--white);
+
+  }
+
+  button:hover{
+    border-style: solid;
+    transition-duration: 4s;
+  }
